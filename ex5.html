@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 5 WEBFRONTEND</title>
+</head>
+<body>
+    <h2>NUMERO INTEIRO - PAR OU IMPAR?</h2>
+
+    <form action="">
+        <label for="num">Digite um número:</label>
+        <input type="number" id="num" name="num">
+        <button type="button" onclick="parOuImpar()">Validar</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function parOuImpar(){
+            var entrada = parseInt(document.getElementById("num").value);
+            var resultado = document.getElementById("resultado");
+
+            if (entrada%2 == 0){
+                resultado.textContent = "O número digitado é PAR!"
+            }
+            else{
+                resultado.textContent = "O número digitado é ÍMPAR!"
+            }
+
+        }
+    </script>
+</body>
+</html>

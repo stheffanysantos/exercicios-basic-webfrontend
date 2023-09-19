@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 4 WEBFRONTEND</title>
+</head>
+<body>
+    <h2>ANO BISSEXTO</h2>
+
+    <form action="">
+        <label for="ano"> Digite um ano:</label>
+        <input type="number" id="ano" name="ano">
+        <button  type="button" onclick="validar()" >validar</button>
+     </form>
+
+     <p id="resultado"></p>
+     <script>
+            function validar(){
+                var ano = parseInt(document.getElementById("ano").value);
+                var resultado = document.getElementById("resultado");
+
+                if (ano%400 == 0){
+                    resultado.textContent = "É BISSEXTO!"
+                }
+                if(ano%4 == 0 && ano%100 != 0){
+                    resultado.textContent = "É BISSEXTO!"
+                 }
+                else{
+                    resultado.textContent = " NÃO É BISSEXTO!"
+                }
+            }
+
+     </script>
+</body>
+</html>

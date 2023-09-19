@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 3 WEBFONTEND</title>
+</head>
+<body>
+     <h2>SCRIPT DE NOTAS</h2>
+
+     <form action="">
+        <label for="nota1"> Digite a primeira nota do usuário:</label>
+        <input type="text" id="nota1" name="nota1">
+        <label for="nota2"> Digite a segunda nota do usuário:</label>
+        <input type="text" id="nota2" name="nota2">
+        <button type="button" onclick="mediaGeral()">Medir</button> 
+     </form>
+
+     <p id="resultado"></p>
+
+     <script>
+        function mediaGeral(){
+            var nota1 =parseFloat(document.getElementById("nota1").value);
+            var nota2 =parseFloat(document.getElementById("nota2").value);
+            var resultado = document.getElementById("resultado");
+
+            var media = (nota1 + nota2)/2;
+
+            if (media >= 7){
+                resultado.textContent = " O aluno foi APROVADO!";
+            }
+            if (media === 10){
+                resultado.textContent = " O aluno foi APROVADO COM DISTINÇÃO!";
+            }
+            if (media < 7){
+                resultado.textContent = " O aluno foi REPROVADO!";
+            }
+        }
+     </script>
+</body>
+</html>

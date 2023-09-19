@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 1 WEBFRONTEND</title>
+</head>
+<body>
+    <h2>validação de senha números</h2>
+
+    <form action="">
+        <label for="senha"> Digite a senha escolhida:</label>
+        <input type="text" id="senha" name="senha">
+        <button type="button" onclick="validarsenha()"> validar</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function validarsenha(){
+            var entrada = document.getElementById("senha").value;
+            var resultado = document.getElementById("resultado");
+
+            //verificar se a senha tem números iguais 
+            if (entrada === "54321"){
+                resultado.textContent="senha válida. As senhas correspondem.";
+            }
+            else{
+                resultado.textContent=" A entrada não é válida.";
+            }
+        }
+    </script>
+</body>
+</html>

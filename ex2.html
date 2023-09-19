@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 2 WEBFRONTEND</title>
+</head>
+<body>
+    <h2>MEDIDOR DE APOSENTADORIA</h2>
+
+    <form action=""> 
+        <label for="idade"> Digite a idade do usuário:</label>
+        <input type="text" id="idadeUsuario" name="Idade">
+        <button type="button" onclick="medidoraposentadoria()">Medir</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function medidoraposentadoria(){
+            var entrada = document.getElementById("idadeUsuario").value;
+            var resultado = document.getElementById("resultado");
+
+            var subtração = 65 - entrada;
+
+            if (parseInt(entrada) >= 65){
+                resultado.textContent = "É permitida a aposentadoria.";
+            }
+            else{ 
+                resultado.textContent = "A idade do usuário é de " + entrada + " anos, e é necessário de mais " + subtração + " para se aposentar.";
+            }
+
+      
+        }
+    </script>
+
+</body>
+</html>
